@@ -1,0 +1,12 @@
+@import "../news/news_style_template.wxss";
+.new_con{
+  display: flex;
+  flex-direction: column;
+}
+.show_date {
+  padding: 40rpx 0rpx 40rpx 32rpx;
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  background-color: #fff;
+}

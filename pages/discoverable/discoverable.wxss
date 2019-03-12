@@ -1,0 +1,163 @@
+/* client/pages/1_0/discoverable/discoverable.wxss */
+
+.content {
+  padding: 164rpx 0;
+  padding-bottom: 100rpx;
+  overflow-x: hidden;
+}
+.mine{
+  padding: 0 32rpx;
+}
+.mine.active {
+  position: fixed;
+  width: 100%;
+  padding: 40rpx 32rpx;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999;
+  padding-bottom: 0;
+}
+.recmm{
+  padding: 0 32rpx;
+}
+.recmm.active {
+  margin-top: 215rpx;
+}
+
+.head .title-module {
+  float: left;
+}
+.title-module {
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 34rpx;
+  display: block;
+  font-weight: bolder;
+  position: relative;
+  padding-left: 14rpx;
+}
+
+.title-module::after {
+  content: "";
+  position: absolute;
+  width: 4rpx;
+	height: 24rpx;
+  left: 0;
+  top:50%;
+  margin-top: -14rpx;
+	background-color: #ff5252;
+}
+
+.btn-cont {
+  position: fixed;
+  width: 150rpx;
+  height: 135rpx;
+  bottom: 32rpx;
+  right: 32rpx;
+}
+
+.addCont {
+  display: block;
+  position: absolute;
+  width: 150rpx;
+  height: 135rpx;
+  background-color: #4284f7;
+  box-shadow: 0px 3px 12px 1px rgba(66, 132, 247, 0.34);
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+}
+.imgadd{
+  position: absolute;
+  width: 150rpx;
+  height: 135rpx;
+  top: 0;
+  left: 0;
+}
+.gz {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50rpx;
+  min-height: 35rpx;
+  width: 100%;
+}
+
+.logocont {
+  width: 100%;
+  float: left;
+  font-size: 0;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+
+.logocont .logo {
+  display: inline-block;
+  margin-right: 18rpx;
+  overflow: hidden;
+  width: 96rpx;
+	height: 96rpx;
+	background-color: #f4f4f4;
+  border-radius: 50%;
+  padding: 3rpx;
+}
+
+.logocont .logo .logo-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.head{
+  overflow: hidden;
+}
+.head .edit-btn {
+  float: right;
+  font-size: 28rpx;
+	color: #666666;
+}
+.head .edit-btn .txt{
+  display: inline-block;
+  vertical-align: middle
+}
+.head .edit-btn .icon{
+  width: 16rpx;
+  height: 12rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.ts-text-login {
+  display: block;
+  width: 250rpx;
+  height: 56rpx;
+  border: solid 2rpx #333;
+  font-size: 24rpx;
+  margin: auto;
+  text-align: center;
+  line-height: 56rpx;
+}
+
+.ts-text {
+  font-size: 30rpx;
+	line-height: 72rpx;
+	color: #333333;
+  width: 100%;
+	height: 72rpx;
+	border-radius: 8rpx;
+	border: dotted 1px #999999;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.jiange {
+  width: 100%;
+  height: 4rpx;
+  background-color: #f4f4f4;
+  margin-bottom: 20rpx;
+}

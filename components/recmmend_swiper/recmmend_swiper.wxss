@@ -1,0 +1,124 @@
+/* component/recmmend_swiper.wxss */
+
+.swiper-container {
+  position: relative;
+  padding-bottom: 96rpx;
+}
+
+swiper-item {
+  padding-top: 20rpx;
+}
+
+.swiper {
+  width: 100%;
+  overflow:hidden;
+}
+
+.slide-cont {
+  margin-right: -32rpx;
+  display: table;
+}
+
+.swiper .slide-image {
+ width: 207rpx;
+	height: 269rpx;
+	background-color: #fbfbfb;
+	border-radius: 8px;
+  float: left;
+  margin-right: 32rpx;
+  padding-top: 40rpx;
+}
+
+.swiper .slide-image .add {
+  display: none;
+}
+
+.swiper .slide-image.active {
+  position: relative;
+}
+
+.swiper .slide-image.active .add {
+  display: block;
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  background-color: #4284f7;
+  border-radius: 50%;
+  top: -16rpx;
+  right: -16rpx;
+}
+
+.swiper .slide-image .logo {
+  width: 96rpx;
+  height: 96rpx;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-bottom: 18rpx;
+  border:3rpx solid #f4f4f4;
+}
+
+.swiper .slide-image .name {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+  width: 100%;
+	font-size: 22rpx;
+	color: #333333;
+  font-weight: bold;
+}
+
+.swiper .slide-image .text {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  font-size: 22rpx;
+  color: #666;
+  width: 100%;
+  margin: auto;
+  height: 58rpx;
+  line-height: 30rpx;
+  padding: 0 16rpx;
+}
+
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom:48rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 6rpx;
+  height: 6rpx;
+  background-color: #333;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.swiper-container .dots .dot.active {
+  width: 32rpx;
+  height: 6rpx;
+  background-color: #333;
+  border-radius: 3rpx;
+}
+.ts-text{
+  font-size: 26rpx;
+  color: #333;
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  line-height:40rpx;
+}

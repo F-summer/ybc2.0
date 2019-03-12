@@ -1,0 +1,10 @@
+<!-- 引入另外一個模板 -->
+<import src="../news/news_style_template.wxml"></import>
+<template name="news_addDate">
+  <view class='new_con'>
+    <text class='show_date'>{{item.date}}</text>
+    <block wx:for="{{item.news}}" wx:for-item="dataitem" wx:key="index">
+      <template is="news_style_template" data="{{...dataitem}}"></template>
+    </block>
+  </view>
+</template>

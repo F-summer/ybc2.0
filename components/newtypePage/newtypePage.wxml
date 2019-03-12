@@ -1,0 +1,18 @@
+<!--components/newtypePage.wxml-->
+<view class='typecont'>
+  <block wx:if="{{typeObj.length>0}}" wx:for="{{typeObj}}" data-id="{{item.typeid}}" wx:key="{{index}}">
+    <view class='type-name' id="{{'index'+item.account_type_id}}">
+      {{item.account_type}}
+    </view>
+    <view class='cont-info' style='overflow:hidden'>
+      <view class="type-item{{isActive===1?' active':''}}" wx:for="{{item.account_list}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="itemnew" data-id="{{itemnew.account_id}}" bindtap='showShare'>
+        <image class='icon add' wx:if="{{itemnew.status==0}}" data-id="{{itemnew.account_id}}" src="/images/add.png" catchtap='addshare'></image>
+        <image class='icon add' wx:if="{{itemnew.status==1}}" data-id="{{itemnew.account_id}}" src="/images/del.png" catchtap='delcommit'></image>
+        <view class='logo-img'>
+          <image class="img" src='{{itemnew.account_img}}'></image>
+        </view>
+        <text class='text'>{{itemnew.account_name}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,25 @@
+<!--components/notLike/notLike.wxml-->
+<view wx:if='{{showNotLike}}' class='not-like-alt'>
+  <view class='cont-of-alt'>
+    <view class='noe info' wx:if="{{!showNotLikeTwon}}">
+      <view class='item' bindtap='sendNotLikeContFun' wx:if="{{item.count==0}}" wx:for="{{forstArr}}" wx:key="{{index}}" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+      <view class='item' bindtap='showTwonFun' wx:key="{{index}}" wx:if="{{item.count!=0}}" wx:for="{{forstArr}}" data-id="{{item.id}}">
+        <text class='text'> {{item.name}}</text>
+        <image class='goMore icon' src="/images/collect_go.png"></image>
+      </view>
+    </view>
+    <view class='twon info' wx:if="{{showNotLikeTwon}}">
+      <view class='item'>
+        <image bindtap='backOneFun' src="/images/collect_go.png" class='backOne icon'></image>
+        <text class='text tit'>我要举报</text>
+      </view>
+      <view class='item' bindtap='sendNotLikeContFun' data-id="{{item.id}}" wx:for="{{secondArr}}" wx:key="{{key}}">
+       {{item.name}}
+      </view>
+    </view>
+    <view bindtap='cancerFun' class='cancer'>取消</view>
+  </view>
+</view>
+

@@ -1,0 +1,78 @@
+.page__bd {
+  align-items: center;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/*设置商品展示项*/
+
+.goodsItem {
+  background-color: #fff;
+  border-radius: 10px;
+  /*这里的355rpx非常重要,(355+左边距10rpx+右边距10rpx) * 2 = 750rpx(固定值)*/
+  width: 355rpx;
+  margin: 10rpx;
+  float: left;
+}
+
+/*设置商品描述信息的内边距*/
+
+.goodsDescItem {
+  padding: 0px 10px 10px;
+}
+
+/*商品图片*/
+
+.goodsImg {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/*商品名称*/
+
+.goodsName {
+  font-size: 14pt;
+}
+
+/*商品价格*/
+
+.goodsPrice {
+  font-size: 14pt;
+  color: red;
+}
+
+/*商品类别*/
+
+.goodsType {
+  font-size: 11pt;
+  color: #888;
+}
+
+/*商品上架时间*/
+
+.goodsTime {
+  font-size: 11pt;
+  color: #888;
+}
+
+/*价格图标*/
+
+.priceLogo {
+  color: red;
+  margin: -10px 2px 0px 0px;
+}
+
+/*清除数据加载完成提示两边的浮动*/
+
+.showLoad {
+  padding-top: 1px;
+  clear: both;
+}
+
+/*设置数据加载完成提示样式*/
+
+.loadDesc {
+  background-color: #f8f8f7;
+}

@@ -1,0 +1,65 @@
+/* components/notLike/notLike.wxss */
+.not-like-alt{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-like-alt .cont-of-alt{
+  width: 586rpx;
+	border-radius: 16rpx;
+}
+.not-like-alt .cont-of-alt .info{
+  width: 586rpx;
+	background-color: #ffffff;
+	border-radius: 16rpx;
+  overflow: hidden;
+}
+.not-like-alt .cont-of-alt .item{
+  height: 88rpx;
+  border-bottom: 1rpx solid #ebebeb;
+  font-size: 30rpx;
+	color: #333333;
+  text-align: center;
+  line-height: 88rpx;
+  position:relative;
+}
+.not-like-alt .cont-of-alt .item .text{
+  float: left;
+  text-align: center;
+  line-height: 88rpx;
+  width: 100%;
+}
+.not-like-alt .cont-of-alt .item .text.tit{
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.not-like-alt .cont-of-alt .item .icon{
+  position: absolute;
+  width: 17rpx;
+  height: 34rpx;
+  top:28rpx;
+}
+.not-like-alt .cont-of-alt .item .icon.goMore{
+  right: 32rpx;
+}
+.not-like-alt .cont-of-alt .item .icon.backOne{
+  left: 32rpx;
+  transform: rotateZ(180deg);
+}
+.not-like-alt .cancer{
+  width: 586rpx;
+	height: 88rpx;
+	background-color: #ffffff;
+	border-radius: 16rpx;
+  margin-top: 24rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 30rpx;
+	color: #333333;
+}

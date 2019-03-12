@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText":"历史记录",
+  "navigationBarBackgroundColor":"#4284F7",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "addCollect": "/components/collect_add/collect_add",
+    "notLike": "/components/notLike/notLike",
+    "canvasEle": "/components/canvas/canvas",
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  }
+}

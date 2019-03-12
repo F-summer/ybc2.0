@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "recmmendSwiper": "/components/recmmend_swiper/recmmend_swiper",
+    "typepage": "/components/typepage/typepage",
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  },
+  "navigationBarTitleText": "发现"
+}

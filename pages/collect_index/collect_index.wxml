@@ -1,0 +1,55 @@
+<!-- pages/collect_index/collect_index.wxml -->
+<navigation_twon showIs="false" color="#4284f7"></navigation_twon>
+<view class='content'>
+  <collectTop bind:myevent="getListFun" stlyeType="1" flieLength="{{flieLength}}" allPage="{{allPage}}"></collectTop>
+  <view class='list-content'>
+    <view bindtap='showDeatil' class='list-item' wx:for="{{listArr}}" data-index="{{index}}" wx:key="{{index}}" data-id="{{item.collection_id}}">
+      <image class='left' src='/images/collect_bg.png'></image>
+      <view class='right'>
+        <text class='name text'>{{item.collection_name}}</text>
+        <text class='collect-num text'>
+          收藏 <text class='num'>{{item.collection_count}}</text>篇
+        </text>
+        <text wx:if="{{item.last_update_time}}" class='collect-time text'>
+          最后收藏时间：{{item.last_update_time}}
+        </text>
+      </view>
+      <view class='img-cont' data-val="{{item.collection_name}}" wx:if="{{index!==0}}" catchtap='editFun' data-id="{{item.collection_id}}" data-length="{{item.collection_count}}">
+        <image class='edit-btn' src='/images/collect_edit.png' ></image>
+      </view>
+    </view>
+  </view>
+  <view class='edit-alt' wx:if="{{showAllAlt}}">
+    <view class='alt-box' wx:if="{{showEditAlt}}">
+      <view class='show-msg'>
+        <text class='title'>{{valueName}}</text>
+        <view class='optionaction'>
+          <view class='type left' bindtap='renameFun'>
+            <image class='icon' src='/images/collect_rename.png'></image>
+            <text class='text'>重命名</text>
+          </view>
+          <view class='type right' data-id="{{collectionId}}" data-length="{{contlength}}" bindtap='delFun'>
+            <image class='icon' src='/images/collect_del.png'></image>
+            <text class='text'>删除</text>
+          </view>
+        </view>
+      </view>
+      <button class='cancel' bindtap='cancelEdit'>取消</button>
+    </view>
+    <view class='rename-alt' wx:if="{{showRenameAlt}}">
+      <text class='title'>重命名</text>
+      <input value='{{valueName}}' bindinput='onInput' class='inp' />
+      <view class='btn-cont'>
+        <view class='cancel btn' bindtap='cancelRename'>取消</view>
+        <view class='sure btn' data-id="{{collectionId}}" bindtap='sureRename'>确定</view>
+      </view>
+    </view>
+    <view class='del-alt' wx:if="{{showDelType}}">
+      <view class='conent'>
+        <text class='text borderb' bindtap='delTypeOne'>只删除收藏夹内容会转移到默认收藏夹</text>
+        <text class='text' bindtap='delTypeTowe'>收藏夹和内容全部删除</text>
+      </view>
+      <view class='cancel' bindtap='cancelDel'>取消</view>
+    </view>
+  </view>
+</view>

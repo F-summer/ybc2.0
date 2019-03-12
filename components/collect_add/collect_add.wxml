@@ -1,0 +1,23 @@
+<!-- components/collect_add/collect_add.wxml -->
+<view class="collect-add" wx:if="{{showAll}}">
+  <view class="box">
+    <view catch:tap="cancel" class="cancel">
+      <image src="/images/close.png" class='cancel-img'/>
+    </view>
+    <text class="title">收藏到</text>
+    <scroll-view class="file-cont" scroll-x="true">
+      <view class="item" bindtap='saveHeartFun' wx:for="{{objList}}" wx:key="{{index}}" data-id="{{item.collection_id}}">
+        <image class="add-img icon" src="/images/add2.png" />
+        <image class="file-img" src="/images/collect_bg.png" />
+        <text class="name">{{item.collection_name}}</text>
+        <text class="num">{{item.collection_count}}</text>
+      </view>
+    </scroll-view>
+    <view class="add-file" wx:if="{{objList.length<10}}">
+      <input class="inp" bindinput='onInput' placeholder="保存到新收藏夹，请输入名称" />
+      <form bindsubmit='formIdFun' report-submit='true' data-type="1382" >
+        <button class="add-btn" bindtap='sureFile' formType="submit">确认并收藏</button>
+      </form>
+    </view>
+  </view>
+</view>

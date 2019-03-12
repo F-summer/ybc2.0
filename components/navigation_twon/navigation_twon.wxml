@@ -1,0 +1,26 @@
+<!--components/navigation_twon/navigation_twon.wxml-->
+<view class='content' style="padding-top:{{statusBarHeight}}px;background:{{color}};">
+  <view class='left' wx:if="{{showback!='false'}}" style="height:{{titleBarHeight}}rpx;background:{{color=='#fff'||color=='#ffffff'?'rgba(255,255,255,0.1)':'rgba(0,0,0,0.1)'}}">
+    <form class='submit' bindsubmit='formIdFun' report-submit='true' data-id="0" data-type="1395">
+      <button formType="submit" bindtap='backFun' class='box icon_left'>
+        <image class='icon' src="{{color=='#fff'||color=='#ffffff'?'/images/icon_back1.png':'/images/icon_back.png'}}"></image>
+      </button>
+    </form>
+    <view class='box icon_center'>
+      <view class='shu'></view>
+    </view>
+    <form class='submit' bindsubmit='formIdFun' report-submit='true' data-id="0" data-type="1396">
+      <button formType="submit" bindtap='indexFun' class='box icon_right'>
+        <image class='icon' src="{{color=='#fff'||color=='#ffffff'?'/images/icon_home1.png':'/images/icon_home.png'}}"></image>
+      </button>
+    </form>
+  </view>
+  <view class='right' wx:if="{{showIs=='true'}}">
+    <view class='search' style="height:{{titleBarHeight}}rpx" bindtap='showSearchFun'>
+      <image class='icon' src='/images/icon_search.png'></image>
+      <view class='serch-info'>
+        <text class='text' catchtap='searchOption' data-item="{{item}}" wx:for="{{heartArr}}" wx:key="{{index}}" wx:if="{{index<2}}">{{item}} {{index<1?"|":"…"}} </text>
+      </view>
+    </view>
+  </view>
+</view>

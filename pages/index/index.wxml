@@ -1,0 +1,90 @@
+<import src="/template/news/news_style_template.wxml" />
+<canvasEle id="canvasEle" contId="{{contId}}" bind:myevent="hideFun" showFixed="{{showFixed}}" bind:shearFrend="onShareAppMessage"></canvasEle>
+<navigation_one wx:if="{{showLm}}"></navigation_one>
+<view class='nav' wx:if="{{showLm}}">
+  <scroll-view class='nav-cont' scroll-x="true">
+    <form bindsubmit='formIdFun' report-submit='true' data-id="{{column_id}}" data-type="1392" class='list-info'>
+      <button formType="submit" class='list-item{{isactive==index?" active":""}}' data-index="{{index}}" bindtap='showNav' wx:for="{{navArr}}" data-id="{{item.column_id}}" wx:key="{{item.column_id}}">{{item.column_name}}</button>
+    </form>
+  </scroll-view>
+  <view class='lm'>
+    <image class='icon' bindtap='showdiscoverableFun' src="/images/lm.png"></image>
+  </view>
+  <!-- <navigator url='/pages/searchPage/searchPage' hover-class='none' hover-class='none'>
+    <image class='icon' src="/images/search_icon_block.png"></image>
+  </navigator> -->
+</view>
+<!-- <view class='search-cont'>
+  <navigator class='search-top' url='/pages/searchPage/searchPage'>
+    <image src='/images/icon_search.png' class='icon'></image>
+    <view class='text' wx:if="{{index<4}}" wx:for="{{heartArr}}" wx:key="{{index}}">
+      <text class='tit'>{{item}}</text><text wx:if="{{index<heartArr.length-1}}" style="color:#ebebeb">|</text>
+    </view>
+  </navigator> 
+</view>-->
+<loading wx:if="{{showLoadingStatus}}"></loading>
+<!-- 首页内容部分 -->
+<block wx:else>
+  <view class="content {{showLm?'active':''}}">
+    <block wx:if="{{isactive == 0}}">
+      <!-- <view class='hand'>
+        <image src='/images/icon.png' class='small_icon'></image>
+        <text>推荐</text>
+      </view> -->
+
+      <block wx:if="{{tuijianShow}}" wx:for="{{nl_recommend}}" wx:for-item="item" wx:key="index">
+        <template is="news_style_template" data="{{...item}}" />
+      </block>
+      <!-- <view class='hand'>
+        <image src='/images/icon.png' class='small_icon'></image>
+        <text>最新</text>
+      </view> -->
+      <block wx:if="{{ioShow}}" wx:for="{{nl_new}}" wx:for-item="item" wx:key="index">
+        <template is="news_style_template" data="{{...item}}" />
+      </block>
+      <!-- flj code begin -->
+      <view class='creator'>
+        <image class='creator_bg' src='/images/bg.jpg'></image>
+        <view class='creator_top'>
+          <text class='creator_tittle'>优质创作者</text>
+          <image class='creator_more_img' src='../images/more.png'></image>
+          <text class='creator_more' bindtap='toDiscover'>更多创作者</text>
+        </view>
+        <view class='creator_con'>
+          <component-creator id="creator" data-arr="creatorArr"></component-creator>
+        </view>
+      </view>
+      <!-- <view class='hand'>
+        <image src='/images/icon.png' class='small_icon'></image>
+        <text>资讯</text>
+      </view> -->
+      <block wx:for="{{nl_flow}}" wx:if="{{ioShow}}" wx:for-item="item" wx:key="id">
+        <template is="news_style_template" data="{{...item}}" />
+      </block>
+      <view class="bottom_more" wx:if="{{ioShow}}">
+        <text>{{bottom_more}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{!showNoMsg}}">
+        <block wx:for="{{column_flow}}" wx:for-item="item" wx:key="id">
+          <template is="news_style_template" data="{{...item}}" />
+        </block>
+        <view class="bottom_more" wx:if="{{ioShow}}">
+          <text>{{bottom_more}}</text>
+        </view>
+      </block>
+      <image wx:else class='noMsgimg' src='/images/noMsg.png'></image>
+    </block>
+  </view>
+</block>
+<addCollect showAll="{{showAll}}" id="addCollect" sendId="{{sendId}}" bind:myevent="successHeart"></addCollect>
+<!-- 栏目弹框 -->
+<view class='subscription-alt' wx:if="{{showsubscriptionalt}}">
+  <subscriptionEdit bind:hideal="hidediscoverableFun"></subscriptionEdit>
+</view>
+
+<notLike showNotLike="{{showNotLike}}" bind:hideListMsg="hideContFun" contId="{{contId}}" contTitle="{{contTitle}}"></notLike>
+<g-card cardShow="{{cardShow}}" newsObj="{{newsObj}}"></g-card>
+<!-- 添加到桌面 -->
+<g-desk id="bottom"></g-desk>

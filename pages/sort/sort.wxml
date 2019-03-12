@@ -1,0 +1,8 @@
+<view >
+   <text class='normal_title'>拖动排序</text>
+    <view class='item_container'>
+    <view wx:for='{{all_list}}' class="item {{index==current?'moving':'normal'}}"  style="left:{{index==current?move_x:item.left}}px;top:{{index==current?move_y:item.top}}px" catchtouchmove="move" catchtouchstart="movestart" bindtouchend="moveend" data-index="{{index}}">
+      {{item.text}}
+    </view>
+   </view> 
+</view>

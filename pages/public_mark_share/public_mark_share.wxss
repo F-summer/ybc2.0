@@ -1,0 +1,119 @@
+@import "/template/newsAddDate/news_addDate_template.wxss";
+
+page {
+  background-color: #f4f4f4;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 144rpx;
+}
+.publicShare_top {
+  display: flex;
+  width: 100%;
+  height: 105rpx;
+  background-color: #4284f7;
+}
+
+.publicShare_toplogo {
+  width: 100%;
+  background: #4284f7;
+}
+
+.publicShare_toplogo_con {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 32rpx 32rpx 0 0;
+  background: #fff;
+  border-bottom: 1rpx solid #ebebeb;
+  position: relative;
+}
+
+.publicShare_logoimg_con {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -65rpx;
+  left: 72rpx;
+}
+
+.publicShare_logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 5rpx;
+  border: 3rpx solid #e7eeff;
+}
+
+.publicShare_title {
+  font-size: 34rpx;
+  color: #27282c;
+  font-weight: bold;
+  margin-left: 72rpx;
+  margin-top: 97rpx;
+}
+
+.publicShare_describe {
+  width: 100%;
+  padding: 0rpx 72rpx;
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 38rpx;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+.publicShare_article {
+  display: flex;
+  padding: 0rpx 72rpx;
+  justify-content: space-around;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.public_mark_article_count {
+  display: flex;
+  flex-direction: column;
+}
+
+.shuliang {
+  font-size: 40rpx;
+  color: #4284f7;
+  font-weight: bold;
+  text-align: center;
+}
+
+.xinzengshuliang {
+  font-size: 40rpx;
+  color: #ff5252;
+  font-weight: bold;
+  text-align: center;
+}
+
+.article_describe {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.fenge {
+  height: 60rpx;
+  width: 1rpx;
+  background: #ebebeb;
+}
+
+.bottom_more {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+  height: 40rpx;
+  color: #ccc;
+  font-size: 26rpx;
+  align-items: center;
+  margin-bottom: 40rpx;
+}

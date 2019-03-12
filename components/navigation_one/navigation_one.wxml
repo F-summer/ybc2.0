@@ -1,0 +1,9 @@
+<!--components/navigation_one/navigation_one.wxml-->
+<view class='content' style="padding-top:{{statusBarHeight}}px">
+  <view class='search' style="height:{{titleBarHeight}}rpx;" bindtap='showSearchFun'>
+    <image class='icon' src='/images/icon_search.png'></image>
+    <view class='serch-info'>
+      <text class='text' catchtap='searchOption' data-item="{{item}}" wx:for="{{heartArr}}" wx:key="{{index}}" wx:if="{{index<2}}">{{item}} {{index<1?"|":"…"}} </text>
+    </view>
+  </view>
+</view>

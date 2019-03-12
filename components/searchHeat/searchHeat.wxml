@@ -1,0 +1,16 @@
+<!--components/searchHeat/searchHeat.wxml-->
+<view class='heartcont'>
+  <view class='tit'>
+    <text class='text'>热门搜索</text>
+  </view>
+  <view class='memo-info'>
+    <view class='memo-item' wx:for="{{heartArr}}" wx:key="{{index}}" bindtap='heartFun' data-name="{{item}}">{{item}}</view>
+  </view>
+  <view class='tit' wx:if="{{!hideClaen&&oldArr.length>0}}">
+    <text class='text'>搜索历史</text>
+    <view class='none' bindtap='clearArrFun'>清除</view>
+  </view>
+  <view class='memo-info'>
+    <view class='memo-item' wx:for="{{oldArr}}" wx:key="{{index}}" bindtap='heartFun' data-name="{{item}}">{{item}}</view>
+  </view>
+</view>

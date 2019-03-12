@@ -1,0 +1,14 @@
+<view class="card" wx:if="{{cardShow}}" catchtouchmove='true' bindtap='close'>
+  <view class="card-content" data-id='{{newsObj.id}}' bindtap='tiaozhuan'>
+    <view class='title'>{{newsObj.title}}</view>
+    <image class='mainImg' src="{{newsObj.thumb_url}}"></image>
+    <view class='author-info'>
+      <image class='logo' src="{{newsObj.logo}}"></image>
+      <view>{{newsObj.name}}</view>
+      <view class='kongge'>·</view>
+      <view>{{newsObj.update_time}}</view>
+      <view class='btn' >点击阅读</view>
+    </view>
+  </view>
+
+</view>

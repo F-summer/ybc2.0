@@ -1,0 +1,29 @@
+<!-- pages/subscription_edit/subscription_edit.wxml -->
+<view class='content'>
+  <text class='name'>已订阅({{contData.length}})</text>
+  <block wx:if="{{notUser}}">
+    <view class='info-cont' wx:if="{{contData.length>0}}">
+      <view bindtouchstart='touchstart' bindtouchend='touchend' bindtouchmove='touchmove' data-val="{{item.column_name}}" class='itemed{{isactive==index||atherActive==index?" normal":""}} {{atherActive==index?" hover-border":""}}' data-index="{{index}}" wx:for="{{contData}}" wx:key="{{index}}" data-id="{{item.column_id}}">
+        <text class='text'>{{item.column_name}}</text>
+        <image class='icon del' data-id="{{item.column_id}}" catchtap='delSub' src='/images/del.png'></image>
+      </view>
+    </view>
+    <text wx:else class="error-text">暂未订阅栏目</text>
+  </block>
+  <block wx:else>
+    <view bindtap='loginFun' class='loginbtn'>点击登录后修改</view>
+  </block>
+  <view class='name'>
+    推荐栏目({{notHoveArr.length}})
+    <text class='ts'>点击添加到订阅栏目</text>
+  </view>
+  <view class='add-cont-info' wx:if="{{notHoveArr.length>0}}">
+    <view class="add-itemed" wx:if="{{notUser}}" wx:for="{{notHoveArr}}" bindtap='addSub' wx:key="{{index}}" data-id="{{item.column_id}}">
+      <text class='text'>+ {{item.column_name}}</text>
+    </view>
+    <view wx:if="{{!notUser}}" class="add-itemed notactive" wx:for="{{notHoveArr}}" wx:key="{{index}}" data-id="{{item.column_id}}">
+      <text class='text'>+ {{item.column_name}}</text>
+    </view>
+  </view>
+  <text wx:else class="error-text">已订阅全部栏目</text>
+</view>

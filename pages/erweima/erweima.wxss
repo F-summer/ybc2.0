@@ -1,0 +1,101 @@
+/* pages/erweima/erweima.wxss */
+
+page {
+  overflow: hidden;
+  padding-top: 144rpx;
+}
+
+.container {
+  width: 750rpx;
+  height: 100%;
+}
+
+.bgimg {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.left-top {
+  position: absolute;
+  width: 496rpx;
+  height: 107rpx;
+  top: 150rpx;
+}
+
+.right_bottom {
+  position: absolute;
+  width: 328rpx;
+  height: 342rpx;
+  top: 500rpx;
+  left: 400rpx;
+}
+
+.left {
+  position: absolute;
+  width: 72rpx;
+  height: 302rpx;
+  top: 290rpx;
+  left: 60rpx;
+}
+
+.left-bottom {
+  position: absolute;
+  width: 448rpx;
+  height: 296rpx;
+  top: 600rpx;
+  left: 0rpx;
+}
+
+.right {
+  position: absolute;
+  width: 99rpx;
+  height: 302rpx;
+  top: 218rpx;
+  left: 626rpx;
+}
+
+.right_top {
+  position: absolute;
+  width: 381rpx;
+  height: 191rpx;
+  left: 400rpx;
+}
+
+.save {
+  position: fixed;
+  bottom: 0rpx;
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 35rpx;
+  background-color: #4284f7;
+}
+
+.contrnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone {
+  width: 405rpx;
+  height: 804rpx;
+}
+
+.distinguish {
+  width: 364rpx;
+  height: 328rpx;
+  margin: 0 auto;
+  position: relative;
+  top: -612rpx;
+}
+
+.title {
+  width: 332rpx;
+  height: 103rpx;
+  margin-top: 80rpx;
+  margin-bottom: 30rpx;
+}

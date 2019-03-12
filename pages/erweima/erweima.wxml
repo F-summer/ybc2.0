@@ -1,0 +1,22 @@
+<!-- pages/erweima/erweima.wxml -->
+<navigation_twon showIs="false" color="#fff"></navigation_twon>
+<view class="container">
+  <view class="bgimg">
+    <image src='/images/erweima/left_top.png' class="left-top"></image>
+    <image src='/images/erweima/right_top.png' class="right_top"></image>
+    <image src='/images/erweima/left.png' class="left"></image>
+    <image src='/images/erweima/right.png' class="right"></image>
+    <image src='/images/erweima/left_bottom.png' class="left-bottom"></image>
+    <image src='/images/erweima/right_bottom.png' class="right_bottom"></image>
+  </view>
+  <view class='contrnt'>
+    <image src='/images/erweima/title.png' class='title'></image>
+    <image src='/images/erweima/phone.png' class='phone'></image>
+  </view>
+  <!-- 长按识别框 -->
+  <view class='distinguish' bindlongtap='previewImage'></view>
+  <view></view>
+  <view class="save" bindtap='saveImage'>
+    <text class="savecamery">保存到手机相册</text>
+  </view>
+</view>

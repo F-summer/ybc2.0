@@ -1,0 +1,63 @@
+/* components/synthesize/synthesize.wxss */
+.title{
+  display: block;
+  width: 100%;
+	height: 50rpx;
+	background-color: #f8f8f8;
+  font-size: 24rpx;
+  line-height: 50rpx;
+	color: #999999;
+  padding-left: 32rpx;
+}
+.cont-info{
+  padding:0 32rpx;
+}
+.cont-info .cont-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items:center;
+  height: 130rpx;
+}
+.cont-info .cont-list .left{
+  width: 80rpx;
+	height: 80rpx;
+	border: 2rpx solid #f4f4f4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.cont-info .cont-list .left .logo{
+  width: 100%;
+  height: 100%;
+}
+.cont-info .cont-list .right{
+  border-bottom: solid 2rpx #ebebeb;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items:center;
+  height: 100%;
+  flex:1;
+  margin-left: 32rpx;
+  overflow: hidden;
+}
+.cont-info .cont-list .right .text-cont .name{
+  display: block;
+  font-size: 30rpx;
+	color: #333333;
+}
+.cont-info .cont-list .right .text-cont .little-text{
+  font-size: 24rpx;
+	color: #999999;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:450rpx;
+  display: block;
+  margin-top: 15rpx;
+}
+.cont-info .cont-list .right .more{
+  width: 17rpx;
+  height: 34rpx
+}

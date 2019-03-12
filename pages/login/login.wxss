@@ -1,0 +1,63 @@
+/* pages/login/login.wxss */
+.login-cont{
+  padding-top: 100rpx;
+}
+.img{
+  display: block;
+  width: 192rpx;
+  height: 205rpx;
+  margin:84rpx auto;
+  margin-bottom: 148rpx;
+}
+.list{
+  padding: 0 40rpx;
+}
+.list .text{
+  font-size: 34rpx;
+	color: #333333;
+  display: block;
+  font-weight: bold;
+}
+.list .msg{
+  font-size: 28rpx;
+	line-height: 40rpx;
+	color: #999999;
+  margin: 32rpx 0;
+}
+.list .item-cont{
+  margin-top: 64rpx;
+}
+.list .item-cont .item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50rpx;
+}
+.list .item-cont .item .yes{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 18rpx;
+}
+.list .item-cont .item .txt-con .tit{
+  font-size: 34rpx;
+	color: #333333;
+  display: block;
+}
+.list .item-cont .item .txt-con .txt{
+  font-size: 28rpx;
+	line-height: 40rpx;
+	color: #999999;
+  margin-top: 20rpx;
+}
+.btn{
+  margin: 65rpx auto;
+  width: 692rpx;
+  background-color: #18ac1a;
+	border-radius: 16rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+	line-height: 88rpx;
+	color: #ffffff;
+}
+.btn::after{
+  border: none;
+}

@@ -1,0 +1,167 @@
+<template name="news_style_template">
+  <block wx:if='{{news_format<2}}'>
+    <view class='news01' wx:if="{{!news_hide}}">
+      <view class='news01_word'>
+        <text class="news01_word_title  {{news_read==1?'read':'not_read'}}" data-url='{{news_url}}' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' data-accouttImage="{{accoutt_image}}" bindtap='RedirectUrl'>{{news_title}}</text>
+        <view class='news01_author' catchtap='nullFun'>
+          <form bindsubmit='formIdFun' class='news01_author_left' data-id='{{news_id}}' report-submit='true' data-type="1400">
+            <button class='btn' formType="submit"  data-id="{{account_id}}" bindtap='skipFun'>
+              <image src='{{accoutt_image}}' class='news01_author_image'></image>
+              <view class='news01_author_name'>{{account_name}}</view>
+              <!-- <view class='news01_date'>{{news_push_time}}</view> -->
+            </button>
+          </form>
+          <view class='icon-cont' catchtap='nullFun'>
+            <!-- <image class='heart' wx:if="{{news_collection===1}}"   src='/images/hearted.png'></image> -->
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1382">
+              <button data-id='{{news_id}}' data-type="1382" class='flexbut' bindtap='removeCollect' wx:if="{{news_collection===1}}" formType="submit">
+                <image src='/images/hearted.png' class='news01_share'></image>
+              </button>
+              <button formType="submit" wx:else bindtap='addcollect' data-id='{{news_id}}'>
+                <image class='news01_share' src='/images/heart.png'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1383">
+              <button formType="submit" class='flexbut' bindtap='shareFun' data-name="shareBtn" data-title='{{news_title}}' data-img='{{thumb_url}}' data-id='{{news_id}}'>
+
+                <image src='../images/share.png' class='news01_share'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1384">
+              <button formType="submit" bindtap='notLickeFun' data-id='{{news_id}}' data-title="{{news_title}}">
+                <image class='news01_share' src='/images/notlike.png'></image>
+              </button>
+            </form>
+          </view>
+        </view>
+      </view>
+      <view data-url='{{news_url}}' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' bindtap='RedirectUrl' class='img-box'>
+        <!-- <view class='time'>
+          <image class='clock' src='/images/clock.png'></image>
+          <text class='time-text'>{{news_push_time}}</text>
+        </view> -->
+        <image src='{{thumb_url}}' class='news01_image'></image>
+      </view>
+    </view>
+  </block>
+  <block wx:if='{{news_format==2}}'>
+    <view class='news02' wx:if="{{!news_hide}}">
+      <view data-url='{{news_url}}' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' bindtap='RedirectUrl'>
+        <image src='{{thumb_url}}' class='news02_image' mode='aspectFill'></image>
+      </view>
+      <view class='news02_word' data-url='{{news_url}}' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' bindtap='RedirectUrl'>
+        <text class="news02_word_title  {{news_read==1?'read':'not_read'}}">{{news_title}}</text>
+      </view>
+      <view class='news01_author'>
+       <form bindsubmit='formIdFun' class='news01_author_left' data-id='{{news_id}}' report-submit='true' data-type="1400">
+            <button class='btn' formType="submit"  data-id="{{account_id}}" bindtap='skipFun'>
+              <image src='{{accoutt_image}}' class='news01_author_image'></image>
+              <view class='news01_author_name'>{{account_name}}</view>
+              <!-- <view class='news01_date'>{{news_push_time}}</view> -->
+            </button>
+          </form>
+        <!-- <view class='news02_author_left'>
+          <image src='{{accoutt_image}}' class='news02_author_image'></image>
+          <text>{{account_name}}</text>
+          <text>{{news_push_time}}</text>
+        </view> -->
+        <view class='icon-cont' catchtap='nullFun'>
+            <!-- <image class='heart' wx:if="{{news_collection===1}}"   src='/images/hearted.png'></image> -->
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1382">
+              <button data-id='{{news_id}}' data-type="1382" class='flexbut' bindtap='removeCollect' wx:if="{{news_collection===1}}" formType="submit">
+                <image src='/images/hearted.png' class='news01_share'></image>
+              </button>
+              <button formType="submit" wx:else bindtap='addcollect' data-id='{{news_id}}'>
+                <image class='news01_share' src='/images/heart.png'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1383">
+              <button formType="submit" class='flexbut' bindtap='shareFun' data-name="shareBtn" data-title='{{news_title}}' data-img='{{thumb_url}}' data-id='{{news_id}}'>
+
+                <image src='../images/share.png' class='news01_share'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1384">
+              <button formType="submit" bindtap='notLickeFun' data-id='{{news_id}}' data-title="{{news_title}}">
+                <image class='news01_share' src='/images/notlike.png'></image>
+              </button>
+            </form>
+          </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if='{{news_format==3}}'>
+    <view class='news03' wx:if="{{!news_hide}}">
+      <view class='news03_word' data-url='{{news_url}}' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' bindtap='RedirectUrl'>
+        <text class="news03_word_title  {{news_read==1?'read':'not_read'}}">{{news_title}}</text>
+      </view>
+      <view class='news03_images'>
+        <image src='{{thumb_url}}' class='news03_image' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' mode='scaleToFill' data-url='{{news_url}}' bindtap='RedirectUrl'></image>
+        <image src='{{s_img[0].img}}' class='news03_image' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' mode='scaleToFill' data-url='{{s_img[0].imgurl}}' bindtap='RedirectUrl'></image>
+        <image src='{{s_img[1].img}}' class='news03_image' data-id='{{news_id}}' data-accountID='{{account_id}}' data-title='{{news_title}}' mode='scaleToFill' data-url='{{s_img[1].imgurl}}' bindtap='RedirectUrl'></image>
+      </view>
+      <view class='news01_author'>
+       <form bindsubmit='formIdFun' class='news01_author_left' data-id='{{news_id}}' report-submit='true' data-type="1400">
+            <button class='btn' formType="submit"  data-id="{{account_id}}" bindtap='skipFun'>
+              <image src='{{accoutt_image}}' class='news01_author_image'></image>
+              <view class='news01_author_name'>{{account_name}}</view>
+              <!-- <view class='news01_date'>{{news_push_time}}</view> -->
+            </button>
+          </form>
+        <!-- <view class='news03_author_left'>
+          <image src='{{accoutt_image}}' class='news03_author_image'></image>
+          <text>{{account_name}}</text>
+          <text>{{news_push_time}}</text>
+        </view> -->
+         <view class='icon-cont' catchtap='nullFun'>
+            <!-- <image class='heart' wx:if="{{news_collection===1}}"   src='/images/hearted.png'></image> -->
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1382">
+              <button data-id='{{news_id}}' data-type="1382" class='flexbut' bindtap='removeCollect' wx:if="{{news_collection===1}}" formType="submit">
+                <image src='/images/hearted.png' class='news01_share'></image>
+              </button>
+              <button formType="submit" wx:else bindtap='addcollect' data-id='{{news_id}}'>
+                <image class='news01_share' src='/images/heart.png'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1383">
+              <button formType="submit" class='flexbut' bindtap='shareFun' data-name="shareBtn" data-title='{{news_title}}' data-img='{{thumb_url}}' data-id='{{news_id}}'>
+
+                <image src='../images/share.png' class='news01_share'></image>
+              </button>
+            </form>
+            <form bindsubmit='formIdFun' data-id='{{news_id}}' report-submit='true' data-type="1384">
+              <button formType="submit" bindtap='notLickeFun' data-id='{{news_id}}' data-title="{{news_title}}">
+                <image class='news01_share' src='/images/notlike.png'></image>
+              </button>
+            </form>
+          </view>
+      </view>
+    </view>
+  </block>
+</template>
+<!-- <template name="news_style_template">
+  <block wx:if='{{news_type<2}}'>
+    <view class='news01'>
+      <view class='news01_word'>
+        <text class="news01_word_title  {{news_read==1?'read':'not_read'}}" data-url='{{news_url}}' data-id='{{news_id}}' bindtap='RedirectUrl'>{{news_title}}</text>
+        <view class='news01_author'>
+          <view class='news01_author_left'>
+            <image src='{{accoutt_image}}' class='news01_author_image'></image>
+            <text>{{account_name}}</text>
+            <text>{{news_push_time}}</text>
+          </view>
+          <view class='icon-cont'>
+           <image class='heart' wx:if="{{news_collection===1}}" catchtap='removeCollect' data-id='{{news_id}}' src='/images/hearted.png'></image>
+          <image class='heart' wx:else catchtap='addcollect' data-id='{{news_id}}' src='/images/heart.png'></image>
+          <button class='flexbut' hover-class='none' data-name="shareBtn" open-type="share" plain="true" data-title='{{news_title}}' data-img='{{thumb_url}}' data-id='{{news_id}}'>
+            <image src='../images/share.png' class='news01_share'></image>
+          </button>
+          </view>
+        </view>
+      </view>
+      <view data-url='{{url}}' data-id='{{id}}' bindtap='RedirectUrl'>
+        <image src='{{thumb_url}}' class='news01_image'></image>
+      </view>
+    </view>
+  </block>
+</template> -->

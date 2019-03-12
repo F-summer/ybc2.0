@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#4284f7",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的收藏",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "collectTop":"/components/collect_top/collect_top",
+    "notLike": "/components/notLike/notLike",
+    "canvasEle": "/components/canvas/canvas",
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  }
+}

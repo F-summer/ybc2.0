@@ -1,0 +1,140 @@
+/* components/newtypePage.wxss */
+
+.contentpage {
+  position: relative;
+}
+
+.type {
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav {
+  font-size: 0;
+  padding-bottom: 16rpx;
+}
+
+.nav .nav-item {
+  font-size: 30rpx;
+  color: #666;
+  display: inline-block;
+  margin-right: 31rpx;
+}
+
+.nav .nav-item.active {
+  font-size: 34rpx;
+  color: #333;
+  position: relative;
+  font-weight: bolder;
+}
+
+.nav .nav-item.active::after {
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 4rpx;
+  background-color: #4284f7;
+  border-radius: 2rpx;
+  bottom: -16rpx;
+  left: 50%;
+  margin-left: -20rpx;
+}
+.cont-info{
+  padding-top:32rpx;
+  padding-left: 32rpx;
+}
+.typecont {
+  margin-right: -100rpx;
+  overflow: hidden;
+}
+
+.typecont .type-item {
+  margin-right: 12rpx;
+  float: left;
+  margin-bottom: 40rpx;
+}
+
+.type-name {
+  color: #333;
+  position: relative;
+  font-size: 24rpx;
+  padding: 0 32rpx;
+  background: #f8f8f8;
+  line-height: 58rpx;
+}
+
+.typecont .type-item.active {
+  position: relative;
+  width: 153rpx;
+  height: 186rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  padding: 24rpx 0;
+  margin-right: 24rpx;
+}
+
+.typecont .type-item .add {
+  display: none;
+}
+
+.typecont .type-item.active .add {
+  position: absolute;
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  background-color: #4284f7;
+  border-radius: 50%;
+  top: -16rpx;
+  right: -10rpx;
+}
+
+.typecont .type-item .logo-img {
+  width: 96rpx;
+  height: 96rpx;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  border: 3rpx solid #f4f4f4;
+  margin: auto;
+  overflow: hidden;
+}
+
+.typecont .type-item .logo-img .img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.typecont .type-item .text {
+  font-size: 22rpx;
+  color: #333;
+  display: block;
+  text-align: center;
+  margin-top: 15rpx;
+  width: 174rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.typecont .type-item.active .text {
+  width: 100%;
+}
+
+.ts-text {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+
+.nav.active {
+  position: fixed;
+  top:215rpx;
+  left: 32rpx;
+  width: 100%;
+  background: #fff;
+  overflow: scroll;
+  z-index: 9999;
+}
+

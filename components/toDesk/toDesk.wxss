@@ -1,0 +1,60 @@
+/* 改版样式 */
+
+.container {
+  position: fixed;
+  z-index: 10000;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.one {
+  width: 560rpx;
+  height: 126rpx;
+  margin-top: 20rpx;
+}
+
+.two {
+  width: 560rpx;
+  height:422rpx;
+  margin-top: 40rpx;
+}
+
+
+
+.know {
+  width: 286rpx;
+  height: 88rpx;
+  margin-top: 40rpx;
+}
+
+.content {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mm-one {
+  width: 558rpx;
+  height: 82rpx;
+  margin-top: 20rpx;
+}
+
+.mm-two {
+  width: 558rpx;
+  height: 365rpx;
+  margin-top: 20rpx;
+}
+
+.mm-five {
+   width: 558rpx;
+  height: 358rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,72 @@
+/* components/card/card.wxss */
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0rpx;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "PingFangSC";
+}
+
+.card-content {
+  width: 686rpx;
+  padding: 40rpx 32rpx;
+  background-color: #fff;
+  margin-top: 160rpx;
+  border-radius: 32rpx;
+  position: relative;
+}
+
+.title {
+  font-size: 38rpx;
+  line-height: 57rpx;
+  font-weight: 550;
+  color: #333;
+  margin-bottom: 34rpx;
+}
+
+.mainImg {
+  width: 622rpx;
+  height: 424rpx;
+  margin-bottom: 36rpx;
+  border-radius: 16rpx;
+}
+
+.author-info {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  width: 622rpx;
+}
+
+.logo {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+
+.kongge {
+  margin: 0 14rpx;
+}
+
+.btn {
+  width: 240rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 16rpx 0rpx 16rpx 16rpx;
+  background-color: rgb(66, 132, 247);
+  box-shadow: 0px 6px 16.2px 1.8px rgba(66, 132, 247, 0.38);
+  position: absolute;
+  right: 33rpx;
+  bottom: 76rpx;
+  font-size: 30rpx;
+  font-weight: 550rpx;
+  color: #fff;
+}

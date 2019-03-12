@@ -1,0 +1,124 @@
+/* pages/history/history.wxss */
+@import "/template/news/news_style_template.wxss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 144rpx;
+}
+
+.history_top {
+  width: 100%;
+  height: 56rpx;
+  background-color: #4284f7;
+}
+
+.yuanjiao {
+  width: 100%;
+  height: 40rpx;
+  border-radius: 32rpx 32rpx 0rpx 0rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
+}
+
+.history_search {
+  width: 100%;
+  height: 64rpx;
+  padding: 0rpx 32rpx;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #4284F7; */
+}
+
+.search_out {
+  display: flex;
+  flex-direction: row;
+  width: 600rpx;
+  height: 64rpx;
+  background-color: #f4f4f4;
+  margin-right: 32rpx;
+  border-radius: 8rpx;
+}
+
+.search_img {
+  width: 28rpx;
+  height: 28rpx;
+  margin: auto 24rpx;
+}
+
+.search_input {
+  font-size: 28rpx;
+  color: #333;
+  height: 64rpx;
+  line-height: 64rpx;
+  width: 520rpx;
+}
+
+.search_input::-ms-input-placeholder, .search_input::-webkit-input-placeholder {
+  font-size: 28rpx;
+  color: #d4d4d4;
+}
+
+.sousuo_btn {
+  font-size: 30rpx;
+  color: #333;
+  height: 64rpx;
+  line-height: 64rpx;
+  white-space: nowrap;
+}
+
+.reader {
+  margin-left: 32rpx;
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.count {
+  color: #4284f7;
+  font-weight: bold;
+}
+
+.history_info {
+  width: 100%;
+  padding: 20rpx 32rpx 8rpx 16rpx;
+}
+
+.active {
+  min-width: 10rpx;
+  margin-left: 16rpx;
+  margin-bottom: 16rpx;
+  height: 56rpx;
+  font-size: 24rpx;
+  padding: 14rpx;
+  display: inline-block;
+  border: 1rpx solid #4284f7;
+  color: #4284f7;
+}
+
+.normal {
+  min-width: 10rpx;
+  margin-left: 16rpx;
+  margin-bottom: 16rpx;
+  height: 56rpx;
+  font-size: 24rpx;
+  padding: 14rpx;
+  display: inline-block;
+  border: 1rpx solid #999;
+  color: #999;
+}
+
+.news_list {
+  background-color: #ebebeb;
+}
+
+.bottom_more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #ccc;
+  font-size: 26rpx;
+  background-color: #f4f4f4;
+}

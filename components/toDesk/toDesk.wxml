@@ -1,0 +1,23 @@
+<!--components/toDesk/toDesk.wxml-->
+<view class='container' wx:if="{{contentShow}}" catchtouchmove='true'>
+  <block wx:if="{{num==3}}">
+    <view class='content'>
+      <image class='mm-one' src='/images/index/one.png'></image>
+      <image class='mm-two' src='/images/index/mm_two.png'></image>
+      <block wx:if="{{phone=='iOS'}}">
+        <image class='mm-five' src='/images/index/mm_five_ios.png'></image>
+      </block>
+      <block wx:else>
+        <image class='mm-five' src='/images/index/mm_five_and.png'></image>
+      </block>
+      <image class='know' src='/images/index/know.png' bindtap='close'></image>
+    </view>
+  </block>
+  <block wx:if="{{num==6}}">
+    <view class='content'>
+      <image class='mm-one' src='/images/index/one.png'></image>
+      <image class='two' src='/images/index/two.png'></image>
+      <image class='know' src='/images/index/know.png' bindtap='close'></image>
+    </view>
+  </block>
+</view>

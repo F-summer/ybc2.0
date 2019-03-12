@@ -1,0 +1,20 @@
+<!--components/synthesize/synthesize.wxml-->
+<view class='content'>
+  <block wx:for="{{typeObj}}" data-id="{{item.typeid}}" wx:key="{{index}}">
+    <text class='title'>{{item.account_type}}</text>
+    <view class='cont-info'>
+      <view class='cont-list' wx:for="{{item.account_list}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="itemnew" data-id="{{itemnew.account_id}}" bindtap='showShare'>
+        <view class='left'>
+          <image class='logo' src='{{itemnew.account_img}}'></image>
+        </view>
+        <view class='right'>
+          <view class='text-cont'>
+            <text class='name'>{{itemnew.account_name}}</text>
+            <text class='little-text'>{{itemnew.account_intro}}</text>
+          </view>
+          <image class='more' src='/images/collect_go.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

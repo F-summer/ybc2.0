@@ -1,0 +1,42 @@
+<import src="/template/newsAddDate/news_addDate_template.wxml" />
+<navigation_twon showIs="false" color="#4284f7"></navigation_twon>
+<view class='container'>
+  <view class="publicShare_top"></view>
+
+  <block wx:for="{{publick_info}}" wx:for-item="item" wx:key="index">
+    <view class='publicShare_toplogo'>
+      <view class='publicShare_toplogo_con'>
+        <view class='publicShare_logoimg_con'>
+          <image src='{{item.account_img}}' class='publicShare_logo'></image>
+        </view>
+
+        <text class='publicShare_title'>{{item.account_name}}</text>
+        <text class='publicShare_describe'>{{item.account_intro}}</text>
+        <view class='publicShare_article'>
+          <view class='public_mark_article_count'>
+            <view class='shuliang'>{{item.total}}</view>
+            <text class='article_describe'>文章总数</text>
+          </view>
+          <view class='fenge'></view>
+          <view class='public_mark_article_count'>
+            <view class='xinzengshuliang'>{{item.today}}</view>
+            <text class='article_describe'>今日新增</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+  <block wx:for="{{nl_flow}}" wx:for-item="item" wx:key="*this">
+    <template is="news_addDate" data="{{item}}" />
+  </block>
+
+  <view class="bottom_more">
+    <text>{{bottom_more}}</text>
+  </view>
+
+</view>
+<addCollect showAll="{{showAll}}" id="addCollect" sendId="{{sendId}}" bind:myevent="successHeart"></addCollect>
+<notLike showNotLike="{{showNotLike}}" bind:hideListMsg="hideContFun" contId="{{contId}}" contTitle="{{contTitle}}"></notLike>
+<canvasEle id="canvasEle" contId = "{{contId}}" bind:myevent="hideFun" showFixed="{{showFixed}}" bind:shearFrend="onShareAppMessage"></canvasEle>

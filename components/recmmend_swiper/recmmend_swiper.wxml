@@ -1,0 +1,25 @@
+<!--component/recmmend_swiper.wxml-->
+<view class="swiper-container">
+  <block wx:if="{{newData.length>0}}">
+    <swiper bindchange="swiperChange" current="{{swiperCurrent}}" class="swiper" interval="5000" duration="1000">
+      <block wx:for="{{newData}}" wx:for-index="index" wx:key="{{index}}">
+        <swiper-item data-id="{{index}}">
+          <view class='slide-cont'>
+            <view wx:for="{{item}}" wx:key="{{arritem.account_id}}" data-id="{{arritem.account_id}}" wx:for-item="arritem" class="slide-image{{isActive===1?' active':''}}" bindtap='showShare'>
+              <image class='icon add' data-id="{{arritem.account_id}}" catchtap="addshare" src="/images/add.png"></image>
+              <image class='logo' src="{{arritem.account_img}}" mode="aspectFill" />
+              <text class='name'>{{arritem.account_name}}</text>
+              <text class='text'>{{arritem.reason}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{newData}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </block>
+  <text wx:else class='ts-text'>暂无推荐</text>
+</view>

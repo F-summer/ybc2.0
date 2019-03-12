@@ -1,0 +1,5 @@
+<!--pages/pageTest/pages_test.wxml-->
+<form bindsubmit="getFormId" report-submit="true" >
+  <button formType="submit">获取formId</button>
+  <button class='img-add-btn' hover-class='none' type="default" size="mini" data-index="{{index}}" bindtap='chooseimage'>上传图片</button>
+</form>

@@ -1,0 +1,88 @@
+swiper {
+  height: 580rpx;
+}
+
+.swiper-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+
+/* flj add */
+
+.logo_item {
+  display: inline-block;
+  width: 172rpx;
+  height: 134rpx;
+  margin-top: 41rpx;
+}
+
+.logo_item image {
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  border-radius: 50%;
+  margin-left: 41rpx;
+  margin-bottom: 16rpx;
+  border: 3rpx solid #e7eeff;
+}
+
+.htext {
+  display: inline-block;
+  font-size: 25rpx;
+  color: #333;
+  width: inherit;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ntext{
+  display: inline-block;
+  font-size: 25rpx;
+  color: #999;
+  width: inherit;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*用来包裹所有的小圆点  */
+
+.dots {
+  display: flex;
+  width: 130rpx;
+  height: 36rpx;
+  flex-direction: row;
+  margin: 0 auto;
+  position: relative;
+  top: 26rpx;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  margin-right: 13rpx;
+  background-color: white;
+  transition: all 0.6s;
+}
+
+/*选中以后的小圆点样式  */
+
+.dot.active {
+  width: 40rpx;
+  height: 8rpx;
+  background-color: white;
+}
+
+/* flj add */

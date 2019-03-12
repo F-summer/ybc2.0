@@ -1,0 +1,24 @@
+<view class="container">
+  <swiper bindchange='swiperChange' autoplay="true" circular="true">
+    <block wx:for="{{datalen}}" wx:for-index="out_index" wx:key="index">
+      <swiper-item>
+        <block wx:for="{{dataArr}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{index<(out_index+1)*12+11 && index>out_index*12-1}}">
+            <view class='logo_item'>
+              <image src="{{item.account_img}}" bindtap="{{item.account_id?'showShare':''}}" data-id="{{item.account_id}}"></image>
+              <text class="{{item.account_id>0?'htext':'ntext'}}">{{item.account_name}}</text>
+            </view>
+          </block> 
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--重置小圆点的样式  -->
+  <block wx:if="{{dataLenth>1}}">
+    <view class="dots">
+      <block wx:for="{{datalen}}" wx:key="index">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </block>
+</view>

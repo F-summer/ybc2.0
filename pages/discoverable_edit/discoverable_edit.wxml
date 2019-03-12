@@ -1,0 +1,25 @@
+<!--client/pages/1_1/discoverable_edit/discoverable_edit.wxml-->
+<navigation_twon showIs="false" ></navigation_twon>
+<view class='content'>
+  <!-- <view class='title-module'>我的关注<text class='tishi'>按住拖动调整顺序</text></view> -->
+  <view class='title-module'>我的关注</view>
+  <view class='gz'>
+    <block wx:if="{{dataArr.length>0}}">
+      <view  data-id="{{item.account_id}}" bindtap='showShare' class='type-item' wx:for="{{dataArr}}" wx:key="{{index}}">
+      <image class='icon del' data-id="{{item.account_id}}" catchtap='delShare' src="/images/del.png"></image>
+      <view class='logo-img'>
+        <image class="img" src='{{item.account_img}}'></image>
+      </view>
+      <text class='text'>{{item.account_name}}</text>
+    </view>
+    </block>
+    <text wx:else class='ts-text'>暂无关注</text>
+  </view>
+  <!-- <text class='title-module' style='margin-bottom:14rpx'>为您推荐</text>
+  <view class='recmmend'>
+    <recmmendSwiper isActive="{{isActive}}" id="recmmendSwiper" bind:myevent='getDiscoverable'></recmmendSwiper>
+  </view> -->
+  <view class='type-content'>
+   <typepage isActive="{{isActive}}" id="typepage" bind:myevent='getDiscoverable' bind:delcommt='delShare'></typepage>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/login/login.wxml-->
+<view class='login-cont'>
+  <view class='img' src="/images/logologin.png"></view>
+</view>

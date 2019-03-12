@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "药友荟",
+  "navigationBarBackgroundColor": "#0f59da",
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "canvasEle": "/components/canvas/canvas",
+    "addCollect": "/components/collect_add/collect_add",
+    "notLike": "/components/notLike/notLike",
+    "loading": "/components/loading/loading",
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  },
+  "navigationBarTitleText": ""
+  
+}

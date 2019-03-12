@@ -1,0 +1,35 @@
+<!-- flj 2018.9.7 -->
+<import src="/template/news/news_style_template.wxml" />
+<navigation_twon showIs="false" color="#4284f7"></navigation_twon>
+<view class='container'>
+  <view class='history_top'>
+    <view class='yuanjiao'></view>
+  </view>
+  <view class='history_search'>
+    <view class='search_out'>
+      <image class='search_img' src='../images/search.png'></image>
+      <input class='search_input' placeholder="输入关键词搜索"  bindinput='getInputValue'/>
+    </view>
+    <text class='sousuo_btn' bindtap='search'>搜索</text>
+  </view>
+  <view class="reader">
+    <text class="tencent">累计阅读<text class="count">{{totle}}</text>篇，最近七天阅读<text class="count">{{count}}</text>篇</text>
+  </view>
+  <view class="history_info">
+    <block wx:for="{{historInfo}}" wx:for-index='index' wx:key="index">
+      <view class="{{index==id?'active':'normal'}}" bindtap='changcolor' data-urlid="{{item.tips_id}}"   data-id="{{index}}">{{item.tips_name}}</view>
+    </block>
+  </view>
+  <!-- 历史记录列表 -->
+  <view class='news_list'>
+  <block wx:for="{{nl_flow}}" wx:for-item="item" wx:key="index">
+    <template is="news_style_template" data="{{...item}}" />
+  </block>
+  </view>
+   <view class="bottom_more">
+    {{bottom_more}}
+  </view>
+</view>
+<addCollect showAll="{{showAll}}" id="addCollect" sendId="{{sendId}}" bind:myevent="successHeart"></addCollect>
+<notLike bind:hideListMsg="hideContFun" showNotLike="{{showNotLike}}" contId="{{contId}}" contTitle="{{contTitle}}"></notLike>
+<canvasEle id="canvasEle" contId = "{{contId}}" bind:myevent="hideFun" showFixed="{{showFixed}}" bind:shearFrend="onShareAppMessage"></canvasEle>

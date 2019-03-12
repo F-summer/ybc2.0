@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "意见反馈",
+  "usingComponents": {
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  }
+}

@@ -1,0 +1,30 @@
+<!--components/collect_top.wxml-->
+<view class='top'>
+  <view class='box'>
+    <view class='item one'>
+      <view class='center'>
+        <view class='left'>
+          <text class="text">收藏夹</text>
+          <text class="num">{{flieLength}}个</text>
+        </view>
+        <image class='add-btn' wx:if="{{stlyeType==1&&flieLength<10}}" bindtap='addFile' src='/images/collect_add.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='msg center'>
+        <text class="text">总收藏数量</text>
+        <text class="num">{{allPage}}篇</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='edit-alt' wx:if="{{showAllAlt}}">
+    <view class='rename-alt'>
+      <text class='title'>创建收藏夹</text>
+      <input bindinput='onInput' class='inp' />
+      <view class='btn-cont'>
+        <view class='cancel btn' bindtap='cancelFile'>取消</view>
+        <view class='sure btn' bindtap='sureFile'>确定</view>
+      </view>
+    </view>
+  </view>

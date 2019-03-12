@@ -1,0 +1,38 @@
+<scroll-view scroll-y="true">
+  <view class="page__bd">
+    <!-- 列表渲染 -->
+    <block wx:for="{{goodsList}}" wx:key="goodsId">
+      <view class="placeholder goodsItem">
+        <image src="/images/news/news.png" mode="center" class="goodsImg"></image>
+        <view class="goodsDescItem">
+          <view class="goodsName">{{item.goodsTitle}}</view>
+          <view class="goodsPrice">
+            <icon class="fa fa-jpy priceLogo" />{{item.goodsPrice}}</view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <view class="goodsType">{{item.goodsType}}</view>
+              </view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <view class="goodsTime">{{item.goodsTime}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="showLoad">
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line loadDesc">数据加载完成</view>
+      </view>
+    </view>
+
+    <view class="weui-footer">
+      <view class="weui-footer__text">Copyright ©2017-2018 ahut</view>
+    </view>
+
+  </view>
+</scroll-view>

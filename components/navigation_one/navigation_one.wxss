@@ -1,0 +1,38 @@
+/* components/navigation_one/navigation_one.wxss */
+.content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  background: #fff;
+  padding: 72rpx 32rpx;
+  padding-bottom: 8rpx;
+  z-index: 9999;
+}
+.content .search{
+  width: 488rpx;
+	height: 72rpx;
+	background-color: #f4f4f4;
+	border-radius: 36rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24rpx;
+}
+.content .search .icon{
+  width: 32rpx;
+  height: 34rpx;
+  margin-right: 16rpx;
+}
+.content .search .serch-info{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  font-size: 30rpx;
+	color: #d4d4d4;
+}
+.content .search .serch-info .text{
+  margin-right: 8rpx;
+}

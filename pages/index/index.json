@@ -1,0 +1,18 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundTextStyle": "light",
+  "backgroundColor": "#f4f4f4",
+  "usingComponents": {
+    "newsList": "/components/newsList/newsList",
+    "component-creator": "/components/creator/creator",
+    "addCollect": "/components/collect_add/collect_add",
+    "navigation_one":"/components/navigation_one/navigation_one",
+    "loading": "/components/loading/loading",
+    "subscriptionEdit":"/components/subscription_edit/subscription_edit",
+    "notLike": "/components/notLike/notLike",
+    "canvasEle":"/components/canvas/canvas",
+    "g-card": "/components/card/card",
+    "g-desk":"/components/toDesk/toDesk"
+  }
+}

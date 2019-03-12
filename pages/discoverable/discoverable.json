@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "synthesize": "/components/synthesize/synthesize",
+    "recmmendSwiper": "/components/recmmend_swiper/recmmend_swiper",
+    "typepage": "/components/typepage/typepage",
+    "typepageNew": "/components/newtypePage/newtypePage",
+    "navigation_twon": "/components/navigation_twon/navigation_twon"
+  },
+  "navigationBarTitleText": "发现"
+}

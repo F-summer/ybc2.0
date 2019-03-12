@@ -1,0 +1,22 @@
+<!--components/canvas/canvas.wxml-->
+<!-- <button bindtap='haibao'>生成海报</button> -->
+<view style='bg-cont' style="position:fixed;top:9999999999999999999999999999999999rpx;">
+  <canvas  class='myCanvas' canvas-id="myCanvas"></canvas>
+</view>
+<view class='fixed-cont' bindtap='hideFun' wx:if="{{showFixed}}">
+  <view class='botom-cont'>
+    <!-- <text class='text'>生成海报或分享好友</text> -->
+    <view class='choose-cont'>
+      <!-- <view class='item' catchtap='haibao'>
+        <image src='/images/downImg.png' class='icon'></image>
+        <text class='wz'>生成朋友圈海报</text>
+      </view> -->
+       <button class='item' hover-class='none' data-name="shareBtn" open-type="share" plain="true" data-title='{{news_title}}' data-img='{{thumb_url}}' data-id='{{contId}}'>
+        <image src='/images/weixin.png' class='icon'></image>
+        <text class='wz'>分享给好友或群聊</text>
+      </button>
+    </view>
+  </view>
+</view>
+
+

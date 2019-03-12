@@ -1,0 +1,112 @@
+<navigation_twon showIs="false" showback="false" color="#4284f7"></navigation_twon>
+<view class='container'>
+  <view class="user_info">
+    <image src='/images/mine/bg.png' class='bg'></image>
+    <view class="user_cont">
+      <image src='{{avatarUrl}}' class='user-handimg'></image>
+      <block wx:if="{{!loginBtn_show}}">
+        <view class="user">
+          <view class="username">{{nickName}}</view>
+          <view class="userlevel">普通用户</view>
+        </view>
+      </block>
+      <block wx:else>
+        <button open-type="getUserInfo" bindgetuserinfo='login' hover-class='none' class="login_btn">
+          立即登录
+        </button>
+      </block>
+
+    </view>
+  </view>
+  <view class="action_list">
+    <view class='interval'></view>
+    <view class="list_item" bindtap='collection'>
+      <image src='/images/mine/collection.png' class='icon_begin' />
+      <view class="text_con">
+        <view>收藏夹</view>
+        <image src="/images/mine/arrow.png" class='arrow' />
+      </view>
+    </view>
+    <view class="list_item" bindtap='history'>
+      <image src='/images/mine/history.png' class='icon_begin' />
+      <view class="text_con">
+        <view>历史记录</view>
+        <image src="/images/mine/arrow.png" class='arrow' />
+      </view>
+    </view>
+    <!-- <view class="list_item">
+      <image src='/images/mine/setUp.png' class='icon_begin' />
+      <view class="text_con">
+        <view>消息设置</view>
+        <image src="/images/mine/arrow.png" class='arrow' />
+      </view>
+    </view> -->
+    <view class='interval'></view>
+    <view class="list_item" bindtap="share">
+      <image src='/images/mine/share.png' class='icon_begin' />
+      <view class="text_con">
+        <view>分享小程序</view>
+        <image src="/images/mine/arrow.png" class='arrow' />
+      </view>
+    </view>
+    <view class="list_item" bindtap='erweima'>
+      <image src='/images/mine/erweima.png' class='icon_begin' />
+      <view class="text_con">
+        <view>小程序二维码</view>
+        <image src="/images/mine/arrow.png" class='arrow' />
+      </view>
+    </view>
+    <!-- <block wx:if="{{desk_show}}">
+      <view class="list_item" bindtap="addDesk">
+        <image src='/images/mine/phone.png' class='icon_begin' />
+        <view class="text_con">
+          <view>添加到桌面</view>
+          <image src="/images/mine/arrow.png" class='arrow' />
+        </view>
+      </view>
+    </block> -->
+    <view class='interval'></view>
+    <block wx:if="{{yijian}}">
+      <view class="list_item">
+        <image src='/images/mine/info.png' class='icon_begin' />
+        <view class="text_con">
+          <view>
+            <!-- <button open-type="contact" session-from="weapp" session-from="weapp" hover-class='none' class='advice'>意见反馈</button> -->
+            <button bindtap='feedbackFun' session-from="weapp" session-from="weapp" hover-class='none' class='advice'>意见反馈</button>
+          </view>
+          <image src="/images/mine/arrow.png" class='arrow' />
+        </view>
+      </view>
+    </block>
+    <view class='interval'></view>
+  </view>
+  <!-- 分享小程序遮罩层 -->
+  <block wx:if="{{mask_show}}">
+    <view class='mask'>
+      <view class="content">
+        <view class="close_mask">
+          <view bindtap="closeMask" class='closeerweima'>
+            <image src="/images/close.png" class='close_mask_img' />
+          </view>
+        </view>
+        <view class="mask_logo">
+          <image src="/images/share_logo.png" class='mask_logo_img' />
+        </view>
+        <view class="describe">
+          <view class="title">分享小程序</view>
+          <view class="share_cont">分享小程序到群,邀请群好友点击,即可获得升级到钻石用户的机会！</view>
+        </view>
+        <button class='share' bindtap='shareBegin' open-type="share">立即邀请</button>
+      </view>
+    </view>
+  </block>
+  <!-- 添加到桌面遮罩层 -->
+  <block wx:if="{{instruction_show}}">
+    <view class='maskTwo'>
+      <view class='addDesk'>
+        <image src='/images/addDesk.png'></image>
+        <view class='know' bindtap='close'></view>
+      </view>
+    </view>
+  </block>
+</view>

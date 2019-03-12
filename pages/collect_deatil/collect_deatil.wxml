@@ -1,0 +1,26 @@
+<!-- pages/collect_deatil/collect_deatil.wxml -->
+<import src="/template/news/news_style_template.wxml" />
+<navigation_twon showIs="false" color="#4284f7"></navigation_twon>
+<view class='content'>
+  <collectTop bind:myevent="getListFun" stlyeType="0" flieLength="{{flieLength}}" allPage="{{allPage}}"></collectTop>
+  <view class='show-list'>
+    <scroll-view class='list-box' scroll-left="{{leftH}}" scroll-x="true">
+      <block wx:for="{{listArr}}" wx:key="{{index}}">
+        <view data-id="{{item.collection_id}}" class="item {{indexNum==item.collection_id?'active':''}}" bindtap='choiceType'>
+          <text class='title'>{{item.collection_name}}</text>
+          <text class='num'>{{item.collection_count}}篇</text>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view class='content-list' scroll-y="true" bindscrolltolower="lower">
+      <block wx:for="{{arrMsg}}" wx:for-item="item" wx:key="{{index}}">
+        <template is="news_style_template" data="{{...item}}"></template>
+      </block>
+      <view class="bottom_more">
+        <text>{{bottom_more}}</text>
+    </view>
+    </scroll-view>
+  </view>
+</view>
+<notLike showNotLike="{{showNotLike}}" bind:hideListMsg="hideContFun" contId="{{contId}}" contTitle="{{contTitle}}"></notLike>
+<canvasEle id="canvasEle" contId = "{{contId}}" bind:myevent="hideFun" showFixed="{{showFixed}}" bind:shearFrend="onShareAppMessage"></canvasEle>

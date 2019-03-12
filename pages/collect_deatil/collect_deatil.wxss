@@ -1,0 +1,86 @@
+/* pages/collect_deatil/collect_deatil.wxss */
+@import "/template/newsAddDate/news_addDate_template.wxss";
+.content{
+  padding-top: 144rpx;
+}
+.show-list {
+  position: fixed;
+  top: 250rpx;
+  width: 100%;
+  padding-top: 32rpx;
+  background: #fff;
+  height: 100%;
+  border-radius: 32px 32px 0px 0px;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.list-box {
+  padding-left: 32rpx;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.list-box .item {
+  width: 186rpx;
+  height: 90rpx;
+  border: solid 1px #999;
+  margin-right: 40rpx;
+  padding: 16rpx;
+  display: inline-block;
+  border-radius: 16rpx;
+}
+
+.list-box .item.active {
+  background-color: #f5f9ff;
+  border: solid 1px #4284f7;
+  border-radius: 16rpx;
+}
+
+.list-box .item .title {
+  height: 28rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-box .item.active .title {
+  color: #4284f7;
+}
+
+.list-box .item .num {
+  font-size: 22rpx;
+  color: #333;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-box .item.active .num {
+  color: #4284f7;
+}
+
+.content-list {
+  padding-bottom: 250rpx;
+  height: 100%;
+  padding-top: 32rpx;
+}
+.bottom_more {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+  height: 40rpx;
+  color: #ccc;
+  font-size: 26rpx;
+  align-items: center;
+  margin-bottom: 40rpx;
+}

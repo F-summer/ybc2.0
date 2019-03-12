@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/community/community",
+    "pages/feedback/feedback",
+    "pages/page_test/pages_test",
+    "pages/content/content",
+    "pages/discoverable/discoverable",
+    "pages/sort/sort",
+    "pages/collect_deatil/collect_deatil",
+    "pages/mine/mine",
+    "pages/history/history",
+    "pages/erweima/erweima",
+    "pages/subscription_edit/subscription_edit",
+    "pages/public_mark_share/public_mark_share",
+    "pages/test/01/01",
+    "pages/discoverable_edit/discoverable_edit",
+    "pages/collect_index/collect_index",
+    "pages/searchPage/searchPage",
+    "pages/feedback_list/feedback_list"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "药百川",
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 60,
+    "navigationStyle": "custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "导航"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#4284f7",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/images/tabBar/info_ed.png",
+        "iconPath": "/images/tabBar/info.png",
+        "pagePath": "pages/index/index",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "/images/tabBar/discovery.png",
+        "iconPath": "/images/tabBar/discover.png",
+        "pagePath": "pages/discoverable/discoverable",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "/images/tabBar/shequ_ed.png",
+        "iconPath": "/images/tabBar/shequ.png",
+        "pagePath": "pages/community/community",
+        "text": "社群"
+      },
+      {
+        "selectedIconPath": "/images/tabBar/mine.png",
+        "iconPath": "/images/tabBar/me.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx40a857971720fa97"
+  ]
+}
